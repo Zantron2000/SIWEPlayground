@@ -1,0 +1,1280 @@
+{
+	"sections": {
+		"exampleSection": {
+			"name": "Example Section",
+			"link": "/exampleSection",
+			"chapters": {
+				"exampleChapter": {
+					"title": "SSX",
+					"type": "Class",
+					"link": "/exampleChapter",
+					"description": "This is where a description goes",
+					"data": {
+						"enumData": [
+							{
+								"member": "A",
+								"value": "B",
+								"description": "C"
+							}
+						],
+						"examplesData": {
+							"description": "D",
+							"examples": [
+								{
+									"title": "E",
+									"description": "F",
+									"example": "G\nH\nI\nJ"
+								}
+							]
+						}
+					}
+				},
+				"exampleChapter2": {
+					"title": "SSX",
+					"type": "Class",
+					"link": "/exampleChapter2",
+					"description": "This is where a description goes",
+					"data": {
+						"enumData": [
+							{
+								"member": "A",
+								"value": "B",
+								"description": "C"
+							}
+						],
+						"examplesData": {
+							"description": "D",
+							"examples": [
+								{
+									"title": "E",
+									"description": "F",
+									"example": "G\nH\nI\nJ"
+								}
+							]
+						}
+					}
+				}
+			}
+		},
+		"ssx-core": {
+			"name": "SSX Core",
+			"link": "/ssx-core",
+			"chapters": {
+				"SSXAlchemyProviderNetworks": {
+					"title": "SSXAlchemyProviderNetworks",
+					"link": "/SSXAlchemyProviderNetworks",
+					"type": "Enum",
+					"description": "The different Alchemy provider networks available, used to help set up the ethers.js provider. Some enum values are no longer provided for ethers.js as of version 5.7.0.",
+					"data": {
+						"enumData": [
+							{
+								"member": "ARBITRUM",
+								"value": "\"arbitrum\"",
+								"description": "Marks the Alchemy provider to be using the arbitrum network"
+							},
+							{
+								"member": "ARBITRUM_RINKEBY",
+								"value": "\"arbitrum-rinkeby\"",
+								"description": "(Depreciated) Marks the Alchemy provider to be using the arbitrum-rinkey test-network"
+							},
+							{
+								"member": "GOERLI",
+								"value": "\"goerli\"",
+								"description": "Marks the Alchemy provider to be using the goerli test-network"
+							},
+							{
+								"member": "KOVAN",
+								"value": "\"kovan\"",
+								"description": "(Depreciated) Marks the Alchemy provider to be using kovan test-network"
+							},
+							{
+								"member": "MAINNET",
+								"value": "\"homestead\"",
+								"description": "Marks the Alchemy provider to be using the ethereum network"
+							},
+							{
+								"member": "OPTIMISM",
+								"value": "\"optimism\"",
+								"description": "Marks the Alchemy provider to be using the optimism network"
+							},
+							{
+								"member": "OPTIMISM_KOVAN",
+								"value": "\"optimism-kovan\"",
+								"description": "(Depreciated) Marks the Alchemy provider to be using the optimism-kovan test-network"
+							},
+							{
+								"member": "POLYGON",
+								"value": "\"matic\"",
+								"description": "Marks the Alchemy provider to be using the polygon network"
+							},
+							{
+								"member": "POLYGON_MUMBAI",
+								"value": "\"maticmum\"",
+								"description": "Marks the Alchemy provider to be using the polygon-mumbai test-network"
+							},
+							{
+								"member": "RINKEBY",
+								"value": "\"rinkeby\"",
+								"description": "(Depreciated) Marks the Alchemy provider to be using the rinkby test-network"
+							},
+							{
+								"member": "ROPSTEN",
+								"value": "\"ropsten\"",
+								"description": "(Depreciated) Marks the Alchemy provider to be using the ropsten test-network"
+							}
+						]
+					}
+				},
+				"SSXAlchemyProvider": {
+					"title": "SSXAlchemyProvider",
+					"link": "/SSXAlchemyProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$15}Alchmey API Provider{/$15}",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXAlchemyProvider{/$c}",
+								"description": "Marks the rpc provider to be alchemy"
+							},
+							{
+								"property": "apiKey?",
+								"type": "string",
+								"description": "(Optional) The api key with private access to the ethers provider / signer. If not provided, ethers.js will provide a public key which may result in reduced performance and throttled requests."
+							},
+							{
+								"property": "network?",
+								"type": "{$c}SSXAlchemyProviderNetworks{/$c}",
+								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXAlchemyProviderNetworks.MAINNET{/$c}"
+							}
+						]
+					}
+				},
+				"SSXInfuraProviderNetworks": {
+					"title": "SSXInfuraProviderNetworks",
+					"link": "/SSXInfuraProviderNetworks",
+					"type": "Enum",
+					"description": "The different Infura provider networks available, used to help set up the ethers.js provider. Some enum values are no longer provided for ethers.js as of version 5.7.0.",
+					"data": {
+						"enumData": [
+							{
+								"member": "ARBITRUM",
+								"value": "\"arbitrum\"",
+								"description": "Marks the Infura provider to be using the arbitrum network"
+							},
+							{
+								"member": "ARBITRUM_RINKEBY",
+								"value": "\"arbitrum-rinkeby\"",
+								"description": "(Depreciated) Marks the Infura provider to be using the arbitrum-rinkey test-network"
+							},
+							{
+								"member": "GOERLI",
+								"value": "\"goerli\"",
+								"description": "Marks the Infura provider to be using the goerli test-network"
+							},
+							{
+								"member": "KOVAN",
+								"value": "\"kovan\"",
+								"description": "(Depreciated) Marks the Infura provider to be using kovan test-network"
+							},
+							{
+								"member": "MAINNET",
+								"value": "\"homestead\"",
+								"description": "Marks the Infura provider to be using the ethereum network"
+							},
+							{
+								"member": "OPTIMISM",
+								"value": "\"optimism\"",
+								"description": "Marks the Infura provider to be using the optimism network"
+							},
+							{
+								"member": "OPTIMISM_KOVAN",
+								"value": "\"optimism-kovan\"",
+								"description": "(Depreciated) Marks the Infura provider to be using the optimism-kovan test-network"
+							},
+							{
+								"member": "POLYGON",
+								"value": "\"matic\"",
+								"description": "Marks the Infura provider to be using the polygon network"
+							},
+							{
+								"member": "POLYGON_MUMBAI",
+								"value": "\"maticmum\"",
+								"description": "Marks the Infura provider to be using the polygon-mumbai test-network"
+							},
+							{
+								"member": "RINKEBY",
+								"value": "\"rinkeby\"",
+								"description": "(Depreciated) Marks the Infura provider to be using the rinkby test-network"
+							},
+							{
+								"member": "ROPSTEN",
+								"value": "\"ropsten\"",
+								"description": "(Depreciated) Marks the Infura provider to be using the ropsten test-network"
+							}
+						]
+					}
+				},
+				"SSXInfuraProvider": {
+					"title": "SSXInfuraProvider",
+					"link": "/SSXInfuraProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$19}Infura API Provider{/$19}",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXInfuraProvider{/$c}",
+								"description": "Marks the rpc provider to be Infura"
+							},
+							{
+								"property": "apiKey?",
+								"type": "string | {$c}SSXInfuraProviderProjectSettings{/$c}",
+								"description": "(Optional) The api key with private access to the ethers provider / signer. If not provided, ethers.js will provide a public key which may result in reduced performance and throttled requests."
+							},
+							{
+								"property": "network?",
+								"type": "{$c}SSXInfuraProviderNetworks{/$c}",
+								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXInfuraProviderNetworks.MAINNET{/$c}"
+							}
+						]
+					}
+				},
+				"SSXEtherscanProviderNetworks": {
+					"title": "SSXEtherscanProviderNetworks",
+					"link": "/SSXEtherscanProviderNetworks",
+					"type": "Enum",
+					"description": "The different Infura provider networks available, used to help set up the ethers.js provider. Some enum values are no longer provided for ethers.js as of version 5.7.0.",
+					"data": {
+						"enumData": [
+							{
+								"member": "GOERLI",
+								"value": "\"goerli\"",
+								"description": "Marks the Etherscan provider to be using the goerli test-network"
+							},
+							{
+								"member": "KOVAN",
+								"value": "\"kovan\"",
+								"description": "(Depreciated) Marks the Etherscan provider to be using the kovan test-network"
+							},
+							{
+								"member": "MAINNET",
+								"value": "\"homestead\"",
+								"description": "Marks the Etherscan provider to be using the ethereum network"
+							},
+							{
+								"member": "RINKEBY",
+								"value": "\"rinkeby\"",
+								"description": "(Depreciated) Marks the Etherscan provider to be using the rinkeby test-network"
+							},
+							{
+								"member": "ROPSTEN",
+								"value": "\"ropsten\"",
+								"description": "(Depreciated) Marks the Etherscan provider to be using the ropsten test-network"
+							}
+						]
+					}
+				},
+				"SSXEtherscanProvider": {
+					"title": "SSXEtherscanProvider",
+					"link": "/SSXEtherscanProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$18}Etherscan API Provider{/$18}",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXEtherscanProvider{/$c}",
+								"description": "Marks the rpc provider to be Etherscan"
+							},
+							{
+								"property": "apiKey?",
+								"type": "string",
+								"description": "(Optional) The api key with private access to the ethers provider / signer. If not provided, ethers.js will provide a public key which may result in reduced performance and throttled requests."
+							},
+							{
+								"property": "network?",
+								"type": "{$c}SSXEtherscanProviderNetworks{/$c}",
+								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXEtherscanProvider.MAINNET{/$c}"
+							}
+						]
+					}
+				},
+				"SSXCloudflareProvider": {
+					"title": "SSXCloudflareProvider",
+					"link": "/SSXCloudflareProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$17}Alchmey API Provider{/$17}",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXCloudflareProvider{/$c}",
+								"description": "Marks the rpc provider to be Cloudflare"
+							}
+						]
+					}
+				},
+				"SSXAnkrProviderNetworks": {
+					"title": "SSXAnkrProviderNetworks",
+					"link": "/SSXAnkrProviderNetworks",
+					"type": "Enum",
+					"description": "The different Ankr provider networks available, used to help set up the ethers.js provider.",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L210",
+					"data": {
+						"enumData": [
+							{
+								"member": "ARBITRUM",
+								"value": "\"arbitrum\"",
+								"description": "Marks the Ankr provider to be using the arbitrum network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L213"
+							},
+							{
+								"member": "POLYGON",
+								"value": "\"matic\"",
+								"description": "Marks the Ankr provider to be using the polygon network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L212"
+							},
+							{
+								"member": "MAINNET",
+								"value": "\"homestead\"",
+								"description": "Marks the Ankr provider to be using the ethereum network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L211"
+							}
+						]
+					}
+				},
+				"SSXAnkrProvider": {
+					"title": "SSXAnkrProvider",
+					"link": "/SSXAnkrProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$16}Ankr API Provider{/$16}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L217",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXAnkrProvider{/$c}",
+								"description": "Marks the rpc provider to be Ankr",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L218"
+							},
+							{
+								"property": "apiKey?",
+								"type": "string",
+								"description": "(Optional) The api key with private access to the ethers provider / signer. If not provided, ethers.js will provide a public key which may result in reduced performance and throttled requests.",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L219"
+							},
+							{
+								"property": "network?",
+								"type": "{$c}SSXAnkrProviderNetworks{/$c}",
+								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXAnkrProviderNetworks.MAINNET{/$c}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L220"
+							}
+						]
+					}
+				},
+				"SSXPocketProviderNetworks": {
+					"title": "SSXPocketProviderNetworks",
+					"link": "/SSXPocketProviderNetworks",
+					"type": "Enum",
+					"description": "The different Pocket provider networks available, used to help set up the ethers.js provider. Some enum values are no longer provided for ethers.js as of version 5.7.0.",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L189",
+					"data": {
+						"enumData": [
+							{
+								"member": "GOERLI",
+								"value": "\"goerli\"",
+								"description": "Marks the Pocket provider to be using the goerli test-network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L193"
+							},
+							{
+								"member": "MAINNET",
+								"value": "\"homestead\"",
+								"description": "Marks the Pocket provider to be using the ethereum network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L190"
+							},
+							{
+								"member": "RINKEBY",
+								"value": "\"rinkeby\"",
+								"description": "(Depreciated) Marks the Pocket provider to be using the rinkeby test-network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L192"
+							},
+							{
+								"member": "ROPSTEN",
+								"value": "\"ropsten\"",
+								"description": "(Depreciated) Marks the Pocket provider to be using the ropsten test-network",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L191"
+							}
+						]
+					}
+				},
+				"SSXPocketProvider": {
+					"title": "SSXPocketProvider",
+					"link": "/SSXPocketProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$20}Pocket API Provider{/$20}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L197",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXPocketProvider{/$c}",
+								"description": "Marks the rpc provider to be Ankr",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L198"
+							},
+							{
+								"property": "apiKey?",
+								"type": "string",
+								"description": "(Optional) The api key with private access to the ethers provider / signer. If not provided, ethers.js will provide a public key which may result in reduced performance and throttled requests.",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L199"
+							},
+							{
+								"property": "network?",
+								"type": "{$c}SSXPocketProviderNetworks{/$c}",
+								"description": "(Optional) The network / blockchain the pocket rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXPocketProviderNetworks.MAINNET{/$c}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L200"
+							}
+						]
+					}
+				},
+				"SSXCustomProvider": {
+					"title": "SSXCustomProvider",
+					"link": "/SSXCustomProvider",
+					"type": "Type",
+					"description": "The settings configurations when using the ether.js {$10}Custom API Provider{/$10}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L230",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders.SSXCustomProvider{/$c}",
+								"description": "Marks the rpc provider to be custom",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L231"
+							},
+							{
+								"property": "url?",
+								"type": "string | {$8}ConnectionInfo{/$8}",
+								"description": "(Optional) The connection to the custom rpc provider. If not provided, uses the value: http://localhost:8545, as documented by {$10}ethers.js{/$10}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L232"
+							},
+							{
+								"property": "network?",
+								"type": "{$9}Network{/$9} | string | number",
+								"description": "(Optional) The network / blockchain the custom rpc will be connecting to. The default option will query the node using eth_chainId and falling back on eth_networkId, as documented by {$10}ethers.js{/$10}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L200"
+							}
+						]
+					}
+				},
+				"SSXInfuraProviderProjectSettings": {
+					"title": "SSXInfuraProviderProjectSettings",
+					"link": "/SSXInfuraProviderProjectSettings",
+					"type": "Type",
+					"description": "The Infura provider settings for a project",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L131",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "projectId",
+								"type": "string",
+								"description": "The project ID, now called the API key, as described by {$12}infura{/$12}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L132"
+							},
+							{
+								"property": "projectSecret",
+								"type": "string",
+								"description": "The project secret, now called the API key secret, as described by {$13}infura{/$13}"
+							}
+						]
+					}
+				},
+				"SSXRPCProviders": {
+					"title": "SSXRPCProviders",
+					"link": "/SSXRPCProviders",
+					"type": "Enum",
+					"description": "The different API RPC Providers allowed by SSX and used by {$14}ethers.js{/$14}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L83C13-L83C29",
+					"data": {
+						"enumData": [
+							{
+								"member": "SSXAlchemyProvider",
+								"value": "\"alchemy\"",
+								"description": "Marks that SSX should be using the ethers.js {$15}Alchemy API RPC Provider{/$15}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L84"
+							},
+							{
+								"member": "SSXAnkrProvider",
+								"value": "\"ankr\"",
+								"description": "Marks that SSX should be using the ethers.js {$16}Ankr API RPC Provider{/$16}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L85"
+							},
+							{
+								"member": "SSXCloudflareProvider",
+								"value": "\"cloudflare\"",
+								"description": "Marks that SSX should be using the ethers.js {$17}Cloudflare API RPC Provider{/$17}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L86"
+							},
+							{
+								"member": "SSXCustomProvider",
+								"value": "\"custom\"",
+								"description": "Marks that SSX should be using the ethers.js {$10}Custom API RPC Provider{/$10}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L87"
+							},
+							{
+								"member": "SSXEtherscanProvider",
+								"value": "\"etherscan\"",
+								"description": "Marks that SSX should be using the ethers.js {$18}Etherscan API RPC Provider{/$18}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L88"
+							},
+							{
+								"member": "SSXInfuraProvider",
+								"value": "\"infura\"",
+								"description": "Marks that SSX should be using the ethers.js {$19}Infura API RPC Provider{/$19}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L89"
+							},
+							{
+								"member": "SSXPocketProvider",
+								"value": "\"pocket\"",
+								"description": "Marks that SSX should be using the ethers.js {$20}Pocket API RPC Provider{/$20}",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L90"
+							}
+						]
+					}
+				},
+				"SSXGenericProvider": {
+					"title": "SSXGenericProvider",
+					"link": "/SSXGenericProvider",
+					"type": "Type",
+					"description": "A generic provider, void of any specific type",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L243",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "service",
+								"type": "{$c}SSXRPCProviders{/$c}",
+								"description": "The type of provider it is, must be one of the supported SSX types",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L244"
+							},
+							{
+								"property": "url?",
+								"type": "string | {$8}ConnectionInfo{/$8}",
+								"description": "(Optional) The connection information for the RPC provider",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L245"
+							},
+							{
+								"property": "network?",
+								"type": "{$9}Network{/$9} | string | number",
+								"description": "(Optional) The network / blockchain to connect to",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L246"
+							},
+							{
+								"property": "apiKey?",
+								"type": "string | {$c}SSXInfuraProviderProjectSettings{/$c}",
+								"description": "(Optional) The api key / project information for the private connection to the RPC provider",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L247"
+							}
+						]
+					}
+				},
+				"SSXRPCProvider": {
+					"title": "SSXRPCProvider",
+					"link": "/SSXRPCProvider",
+					"type": "Type",
+					"description": "The different supported RPC provider types, condensed into one type for polymorphism and used to help identify which ether.js API provider to load",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L72",
+					"data": {
+						"primitiveData": {
+							"type": "{$c}SSXGenericProvider{/$c} | {$c}SSXEtherscanProvider{/$c} | {$c}SSXInfuraProvider{/$c} | {$c}SSXAlchemyProvider{/$c} | {$c}SSXCloudflareProvider{/$c} | {$c}SSXPocketProvider{/$c} | {$c}SSXAnkrProvider{/$c} | {$c}SSXCustomProvider{/$c}",
+							"description": "Represents any RPC provider",
+							"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L73-L80"
+						}
+					}
+				},
+				"isSSXEtherscanProvider": {
+					"title": "isSSXEtherscanProvider",
+					"link": "/isSSXEtherscanProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXEtherscan Provider",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L110",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXEtherscanProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXEtherscanProvider =>\n\tprovider.service === SSXRPCProviders.SSXEtherscanProvider"
+								}
+							]
+						}
+					}
+				},
+				"isSSXInfuraProvider": {
+					"title": "isSSXInfuraProvider",
+					"link": "/isSSXInfuraProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXInfuraProvider",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L144",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXInfuraProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXInfuraProvider =>\n\tprovider.service === SSXRPCProviders.SSXInfuraProvider"
+								}
+							]
+						}
+					}
+				},
+				"isSSXAlchemyProvider": {
+					"title": "isSSXAlchemyProvider",
+					"link": "/isSSXAlchemyProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXAlchemyProvider",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L172",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXAlchemyProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXAlchemyProvider =>\n\tprovider.service === SSXRPCProviders.SSXAlchemyProvider"
+								}
+							]
+						}
+					}
+				},
+				"isSSXCloudflareProvider": {
+					"title": "isSSXCloudflareProvider",
+					"link": "/isSSXCloudflareProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXCloudflareProvider{/$c}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L183",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXCloudflareProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXCloudflareProvider =>\n\tprovider.service === SSXRPCProviders.SSXCloudflareProvider"
+								}
+							]
+						}
+					}
+				},
+				"isSSXPocketProvider": {
+					"title": "isSSXPocketProvider",
+					"link": "/isSSXPocketProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXPocketProvider{/$c}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L204",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXPocketProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXPocketProvider =>\n\tprovider.service === SSXRPCProviders.SSXPocketProvider"
+								}
+							]
+						}
+					}
+				},
+				"isSSXAnkrProvider": {
+					"title": "isSSXAnkrProvider",
+					"link": "/isSSXAnkrProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXAnkrProvider{/$c}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L224",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXAnkrProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXAnkrProvider =>\n\tprovider.service === SSXRPCProviders.SSXAnkrProvider"
+								}
+							]
+						}
+					}
+				},
+				"isSSXCustomProvider": {
+					"title": "isSSXCustomProvider",
+					"link": "/isSSXCustomProvider",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXCustomProvider{/$c}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L224",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXRPCProvider{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXCustomProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXCustomProvider =>\n\tprovider.service === SSXRPCProviders.SSXCustomProvider"
+								}
+							]
+						}
+					}
+				},
+				"SSXRouteConfig": {
+					"title": "SSXRouteConfig",
+					"link": "/SSXRouteConfig",
+					"type": "Interface",
+					"description": "An interface to override a route to the three routes needed for SSX (nonce, login, logout). It is a subset of the {$30}AxiosRequestConfig{/$30}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L15",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "url?",
+								"type": "string",
+								"description": "(Optional) The url path to the api endpoint. The default depends on the route being overridden with this interface",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L17"
+							},
+							{
+								"property": "method?",
+								"type": "'get' | 'post' | 'put' | 'delete'",
+								"description": "(Optional) Overrides the api method to the route, the default depends on the route being overriden with this interface",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L19"
+							},
+							{
+								"property": "customAPIOperation?",
+								"type": "(params: SSXClientSession | Record<string, any> | any) => Promise<any>",
+								"description": "(Optional) Overrides the api operation to get/post information with the custom one provided",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L23-L25"
+							}
+						]
+					}
+				},
+				"SSXServerMiddlewareConfig": {
+					"title": "SSXServerMiddlewareConfig",
+					"link": "/SSXServerMiddlewareConfig",
+					"type": "Interface",
+					"description": "Middleware configurations for setting up route endpoints and desired functionality on API calls",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L34",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "path",
+								"type": "string",
+								"description": "The path to the API endpoint",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L35"
+							},
+							{
+								"property": "callback?",
+								"type": "(req: any, body?: Record<string, any>) => Promise<void> | void",
+								"description": "Not really sure what this is for yet",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L36"
+							}
+						]
+					}
+				},
+				"SSXServerRouteEndpointType": {
+					"title": "SSXServerRouteEndpointType",
+					"link": "/SSXServerRouteEndpointType",
+					"type": "Type",
+					"description": "The different supported types for a route configuration",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L45",
+					"data": {
+						"primitiveData": {
+							"type": "{$c}SSXServerMiddlewareConfig{/$c} | {$30}AxiosRequestConfig{/$30} | {$31}Partial<SSXRouteConfig>{/$31} | string",
+							"description": "All acceptable types of API route configurations",
+							"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L46-L49"
+						}
+					}
+				},
+				"isSSXRouteConfig": {
+					"title": "isSSXRouteConfig",
+					"link": "/isSSXRouteConfig",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXServerRouteEndpointType{/$c} is an SSX Route config object",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L29-L32",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXServerRouteEndpointType{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXRouteConfig = {\n\tconfig: SSXServerRouteEndpointType\n): config is SSXRouteConfig | AxiosRequestConfig | SSXServerMiddlewareConfig =>\n\ttypeof config === 'object'"
+								}
+							]
+						}
+					}
+				},
+				"isSSXServerMiddlewareConfig": {
+					"title": "isSSXServerMiddlewareConfig",
+					"link": "/isSSXServerMiddlewareConfig",
+					"type": "Variable",
+					"description": "A function that checks if a {$c}SSXServerRouteEndpointType{/$c} is a {$c}SSXServerMiddlewareConfig{/$c}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L40-L43",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "Takes in a {$c}SSXServerRouteEndpointType{/$c} and returns a boolean"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "Variable function",
+									"description": "",
+									"example": "const isSSXServerMiddlewareConfig = {\n\tconfig: SSXServerRouteEndpointType\n): config is SSXServerMiddlewareConfig =>\n\t(config as SSXServerMiddlewareConfig)?.path !== undefined"
+								}
+							]
+						}
+					}
+				},
+				"SSXServerRouteNames": {
+					"title": "SSXServerRouteNames",
+					"type": "Interface",
+					"link": "/SSXServerRouteNames",
+					"description": "Server route names for the API endpoints on the server side",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L62",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "nonce?",
+								"type": "string",
+								"description": "(Optional) The route endpoint path for generating a nonce. Default is /ssx-nonce",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L64"
+							},
+							{
+								"property": "login?",
+								"type": "string",
+								"description": "(Optional) The route endpoint path to login. Default is /ssx-login",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L66"
+							},
+							{
+								"property": "logout?",
+								"type": "string",
+								"description": "(Optional) The route endpoint path to logout. Default is /ssx-logout",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L68"
+							}
+						]
+					}
+				},
+				"SSXServerRoutes": {
+					"title": "SSXServerRoutes",
+					"link": "/SSXServerRoutes",
+					"type": "Interface",
+					"description": "The server configurations for the three api endpoint paths",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L52",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "nonce?",
+								"type": "{$c}SSXRPCProviders.SSXCloudflareProvider{/$c}",
+								"description": "(Optional) The route endpoint configuration for generating a nonce. Default is '/ssx-nonce'",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L54"
+							},
+							{
+								"property": "login?",
+								"type": "{$c}SSXServerRouteEndpointType{/$c}",
+								"description": "(Optional) The route endpoint configuration to login. Default is '/ssx-login'",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L56"
+							},
+							{
+								"property": "logout?",
+								"type": "{$c}SSXServerRouteEndpointType{/$c}",
+								"description": "(Optional) The route endpoint configuration to logout. Default is '/ssx-logout'",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L58"
+							}
+						]
+					}
+				},
+				"SSXEnsResolveOptions": {
+					"title": "SSXEnsResolveOptions",
+					"link": "/SSXEnsResolveOptions",
+					"type": "Interface",
+					"description": "The ENS resolve options for getting data on the user's primary ENS",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L251",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "domain?",
+								"type": "boolean",
+								"description": "(Optional) Whether or not to get the user's primary ENS name",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L253"
+							},
+							{
+								"property": "avatar?",
+								"type": "boolean",
+								"description": "(Optional) Whether or not to get the user's primary ENS avatar",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L255"
+							}
+						]
+					}
+				},
+				"SSXEnsData": {
+					"title": "SSXEnsData",
+					"link": "/SSXEnsData",
+					"type": "Interface",
+					"description": "The ENS data structure for information on the user's ENS resolution",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L259",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "domain?",
+								"type": "string | null",
+								"description": "The ENS domain name, or null if one couldn't be found",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L261"
+							},
+							{
+								"property": "avatarUrl?",
+								"description": "The ENS avatar url, or null if one couldn't be found",
+								"type": "string | null",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L263"
+							}
+						]
+					}
+				},
+				"SSXServerHost": {
+					"title": "SSXServerHost",
+					"link": "/SSXServerHost",
+					"type": "Type",
+					"description": "The URL of the server running the ssx-server. Used to help set up the SSXProviderServer and enable SIWE server communication",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L47",
+					"data": {
+						"primitiveData": {
+							"type": "string",
+							"description": "The URL of the server hosting SSX communication"
+						}
+					}
+				},
+				"SSXProviderServer": {
+					"title": "SSXProviderServer",
+					"link": "/SSXProviderServer",
+					"type": "Type",
+					"description": "The provider server information for connecting to a server hosting SSX, used to configure a SSXClientProvider",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L50",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "host",
+								"type": "{$c}SSXServerHost{/$c}",
+								"description": "The host URL to connect to for SSX communication",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L51"
+							},
+							{
+								"property": "routes?",
+								"type": "SSXServerRoutes",
+								"description": "The route configurations for the needed 3 endpoints of server communication",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L53"
+							}
+						]
+					}
+				},
+				"SSXProviderWeb3": {
+					"title": "SSXProviderWeb3",
+					"link": "/SSXProviderWeb3",
+					"type": "Interface",
+					"description": "The Web3 provider settings to connect to a user's wallet and address, used to configure a SSXClientProvider",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L57",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "driver",
+								"type": "any",
+								"description": "The driver to get information from. window.ethereum for Metamask, web3modal.connect() for Web3Modal, const signer = useSigner(); const provider = signer.provider; from Wagmi for Rainbowkit",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L63"
+							}
+						]
+					}
+				},
+				"SSXClientProviders": {
+					"title": "SSXClientProviders",
+					"link": "/SSXClientProviders",
+					"type": "Interface",
+					"description": "Configurations for SSX client providers, including API RPC providers, server providers and Web3 providers",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L67",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "web3?",
+								"type": "SSXProviderWeb3",
+								"description": "The Web3 provider the user is using, such as MetaMask, CoinbaseWallet, etc.",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L69"
+							},
+							{
+								"property": "rpc?",
+								"type": "SSXRPCProvider",
+								"description": "The RPC API connection information to use when make calls to the blockchain with",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L74"
+							},
+							{
+								"property": "server?",
+								"type": "{$c}SSXProviderServer{/$c}",
+								"description": "(Optional) Information on the server hosting the SSXServer, if one exists. Enables communication with server if provided",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L74"
+							}
+						]
+					}
+				},
+				"SSXEnsConfig": {
+					"title": "SSXEnsConfig",
+					"link": "/SSXEnsConfig",
+					"type": "Interface",
+					"description": "The configuration settings for getting ENS data, used for setting up an SSXClientConfig",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L89",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "resolveOnServer?",
+								"type": "boolean",
+								"description": "(Optional) Determines whether ENS data should be resolved on the server or client side",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L91"
+							},
+							{
+								"property": "resolve",
+								"type": "SSXEnsResolveOptions",
+								"description": "Determines what ENS data should be obtained",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L93"
+							}
+						]
+					}
+				},
+				"SiweConfig": {
+					"title": "SiweConfig",
+					"link": "/SiweConfig",
+					"type": "Interface",
+					"description": "The SiweConfig information to display to the user and process as an SIWE message. While many properties can be provided, providing the incorrect or malicious properties will warn the user before signing and in some cases, fail to authenticate the session. I'm having trouble finding the code for this on github, but it is a Partial<ssxSession.SiweConfig>",
+					"github": "",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "address?",
+								"type": "string",
+								"description": "(Optional) The address signing the SIWE message, following capitialization encoding specified in {$3}EIP-55{/$3}"
+							},
+							{
+								"property": "chainId?",
+								"type": "number",
+								"description": "(Optional) The chain ID of the blockchain the session is bound to, and where contracts will be resolved according to {$2}EIP-155{/2}"
+							},
+							{
+								"property": "domain?",
+								"type": "string",
+								"description": "(Optional) The DNS authority that is requesting for the address to sign. In short, the website that is having the user sign in. Is also used when setting up KeplerStorage"
+							},
+							{
+								"property": "nonce?",
+								"type": "string",
+								"description": "(Optional) The token used to prevent replay attacks, at least 8 characters long"
+							},
+							{
+								"property": "issuedAt?",
+								"type": "string",
+								"description": "(Optional) ISO 8601 datetime string of the time which the nonce was issued (Usually just the current time)"
+							},
+							{
+								"property": "expirationTime?",
+								"type": "string",
+								"description": "(Optional) ISO 8601 datetime string that indicates when the signed authentication message is no longer valid"
+							},
+							{
+								"property": "notBefore?",
+								"type": "string",
+								"description": "(Optional) ISO 8601 datetime string that indicates when the signed authentication message becomes valid"
+							},
+							{
+								"property": "requestId?",
+								"type": "string",
+								"description": "(Optional) System-specific identifier that can be used to uniquely refer to the sign-in request"
+							},
+							{
+								"property": "resources?",
+								"type": "string[]",
+								"description": "(Optional) List of information / references to information the user might want resolved. Must be RFC URIs with each seperated by a \\n- "
+							},
+							{
+								"property": "statement?",
+								"type": "string",
+								"description": "(Optional) Human-readable ASCII assertion that the user will sign, can't contain new line characters (\\n)"
+							}
+						]
+					}
+				},
+				"SSXClientConfig": {
+					"title": "SSXClientConfig",
+					"link": "SSXClientConfig",
+					"type": "Interface",
+					"description": "The configuration settings for the client-side of {$c}SSX{/$c}",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L14",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "enableDaoLogin?",
+								"type": "boolean",
+								"description": "(Optional) Enables DAO login with the SSX",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L16"
+							},
+							{
+								"property": "providers?",
+								"type": "{$c}SSXClientProviders{/$c}",
+								"description": "(Optional) Holds information on the network, server and apis to connect to the blockchain",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L18"
+							},
+							{
+								"property": "siweConfig?",
+								"type": "{$c}SiweConfig{/$c}",
+								"description": "(Optional) SIWE message configuration settings for a unique sign in experience",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L20"
+							},
+							{
+								"property": "resolveEns?",
+								"type": "boolean | {$c}SSXEnsConfig{/$c}",
+								"description": "(Optional) Whether or not to resolve ENS information. True means that information will be processed on the client side",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L22"
+							},
+							{
+								"property": "resolveLens?",
+								"type": "boolean | 'onServer'",
+								"description": "Whether or not Lens resolution is enabled. True means to resolve on client",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L24"
+							}
+						]
+					}
+				},
+				"SSXClientSession": {
+					"title": "SSXClientSession",
+					"link": "/SSXClientSession",
+					"type": "Type",
+					"description": "The session data for a signed in user",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L28",
+					"data": {
+						"propertiesData": [
+							{
+								"property": "address",
+								"type": "string",
+								"description": "The signed in user address",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L30"
+							},
+							{
+								"property": "walletAddress",
+								"type": "string",
+								"description": "The user address without delegation (What does this mean)",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L32"
+							},
+							{
+								"property": "chainId",
+								"type": "number",
+								"description": "The blockchain id the session is taking place on",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L33"
+							},
+							{
+								"property": "sessionKey",
+								"type": "string",
+								"description": "The key to identify the session",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L35"
+							},
+							{
+								"property": "siwe",
+								"type": "string",
+								"description": "The message that can be obtained by calling SiweMessage.prepareMessage()",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L37"
+							},
+							{
+								"property": "signature",
+								"type": "string",
+								"description": "The signature of the Siwe message",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L39"
+							},
+							{
+								"property": "ens?",
+								"type": "{$c}SSXEnsData{/$c}",
+								"description": "ENS data supported by SSX",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L41"
+							},
+							{
+								"property": "lens?",
+								"type": "string ? SSXLensProfilesResponse",
+								"description": "Lens profile data supported by SSX",
+								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/client/types.ts#L43"
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"links": {
+		"1": "/",
+		"2": "https://eips.ethereum.org/EIPS/eip-155",
+		"3": "https://eips.ethereum.org/EIPS/eip-55",
+		"8": "https://docs.ethers.org/v5/api/utils/web/#ConnectionInfo",
+		"9": "https://docs.ethers.org/v5/api/providers/types/#providers-Network",
+		"10": "https://docs.ethers.org/v5/api/providers/jsonrpc-provider/#JsonRpcProvider",
+		"12": "https://docs.infura.io/networks/ethereum/how-to/secure-a-project/project-id",
+		"13": "https://docs.infura.io/networks/ethereum/how-to/secure-a-project/project-secret",
+		"14": "https://docs.ethers.org/v5/api/providers/",
+		"15": "https://docs.ethers.org/v5/api/providers/api-providers/#AlchemyProvider",
+		"16": "https://docs.ethers.org/v5/api/providers/api-providers/#AnkrProvider",
+		"17": "https://docs.ethers.org/v5/api/providers/api-providers/#CloudflareProvider",
+		"18": "https://docs.ethers.org/v5/api/providers/api-providers/#EtherscanProvider",
+		"19": "https://docs.ethers.org/v5/api/providers/api-providers/#InfuraProvider",
+		"20": "https://docs.ethers.org/v5/api/providers/api-providers/#PocketProvider",
+		"30": "https://axios-http.com/docs/req_config",
+		"31": "/reference/ssx-core/SSXRouteConfig"
+	},
+	"ToDos": [
+		{
+			"title": "SSXCloudflareProvider",
+			"reason": "Not sure how this works if  no api key is passed and the current cloudflare doesn't provide a global api key without signing up"
+		},
+		{
+			"title": "SSXPocketProviderNetwork",
+			"reason": "Some enum values aren't allowed in ethers.js documentation, but is allowed in the ethers.js code, more research should be done"
+		},
+		{
+			"title": "SSXGenericProviders, SSXServerMiddlewareConfig, SSXServerRouteNames",
+			"reason": "I have no idea where this is used or what it does for the system as well as default values"
+		},
+		{
+			"title": "SSXInfuraProvider",
+			"description": "What is the difference between the api key and the project settings?"
+		},
+		{
+			"title": "SSXEnsConfig",
+			"reason": "resolveOnServer throws a server error, unsure why. More research needed (On Goerli network, might be reason) as well as why you would do this"
+		}
+	]
+}
