@@ -64,7 +64,8 @@
 					"title": "SSXAlchemyProviderNetworks",
 					"link": "/SSXAlchemyProviderNetworks",
 					"type": "Enum",
-					"description": "The different Alchemy provider networks available, used to help set up the ethers.js provider. Some enum values are no longer provided for ethers.js as of version 5.7.0.",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L150",
+					"description": "The different Alchemy provider networks available, used to help set up the ethers.js provider. Some enum values are no longer provided for ethers.js as of version 5.7.0. The currently accepted values for ethers js can be found {$4}here{/$4}",
 					"data": {
 						"enumData": [
 							{
@@ -129,6 +130,7 @@
 					"title": "SSXAlchemyProvider",
 					"link": "/SSXAlchemyProvider",
 					"type": "Type",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L165",
 					"description": "The settings configurations when using the ether.js {$15}Alchmey API Provider{/$15}",
 					"data": {
 						"propertiesData": [
@@ -147,7 +149,17 @@
 								"type": "{$c}SSXAlchemyProviderNetworks{/$c}",
 								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXAlchemyProviderNetworks.MAINNET{/$c}"
 							}
-						]
+						],
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "{$c}getProvider{/$c} Default Values",
+									"description": "Shows what values are taken when the optional values for a SSXAlchemyProvider are not provided.",
+									"example": "const rpc: SSXRPCProvider = {\nservice: SSXRPCProviders.SSXAlchemyProvider\n}\n\nconst provider = getProvider(rpc)\n\n// provider is now a ethers.js provider connected to the ethereum mainnet\n// With a public api key\n"
+								}
+							]
+						}
 					}
 				},
 				"SSXInfuraProviderNetworks": {
@@ -237,7 +249,17 @@
 								"type": "{$c}SSXInfuraProviderNetworks{/$c}",
 								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXInfuraProviderNetworks.MAINNET{/$c}"
 							}
-						]
+						],
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "{$c}getProvider{/$c} Default Values",
+									"description": "Shows what values are taken when the optional values for a SSXInfuraProvider are not provided.",
+									"example": "const rpc: SSXRPCProvider = {\nservice: SSXRPCProviders.SSXInfuraProvider\n}\n\nconst provider = getProvider(rpc)\n\n// provider is now a ethers.js provider connected to the ethereum mainnet\n// With a public api key\n"
+								}
+							]
+						}
 					}
 				},
 				"SSXEtherscanProviderNetworks": {
@@ -297,7 +319,17 @@
 								"type": "{$c}SSXEtherscanProviderNetworks{/$c}",
 								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXEtherscanProvider.MAINNET{/$c}"
 							}
-						]
+						],
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "{$c}getProvider{/$c} Default Values",
+									"description": "Shows what values are taken when the optional values for a SSXEtherscanProvider are not provided.",
+									"example": "const rpc: SSXRPCProvider = {\nservice: SSXRPCProviders.SSXEtherscanProvider\n}\n\nconst provider = getProvider(rpc)\n\n// provider is now a ethers.js provider connected to the ethereum mainnet\n// With a public api key\n"
+								}
+							]
+						}
 					}
 				},
 				"SSXCloudflareProvider": {
@@ -370,7 +402,17 @@
 								"description": "(Optional) The network / blockchain the alchemy rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXAnkrProviderNetworks.MAINNET{/$c}",
 								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L220"
 							}
-						]
+						],
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "{$c}getProvider{/$c} Default Values",
+									"description": "Shows what values are taken when the optional values for a SSXAnkrProvider are not provided.",
+									"example": "const rpc: SSXRPCProvider = {\nservice: SSXRPCProviders.SSXAnkrProvider\n}\n\nconst provider = getProvider(rpc)\n\n// provider is now a ethers.js provider connected to the ethereum mainnet\n// With a public api key\n"
+								}
+							]
+						}
 					}
 				},
 				"SSXPocketProviderNetworks": {
@@ -434,7 +476,17 @@
 								"description": "(Optional) The network / blockchain the pocket rpc will be connecting to. The default option will produce a ethers.js provider connected to {$c}SSXPocketProviderNetworks.MAINNET{/$c}",
 								"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L200"
 							}
-						]
+						],
+						"examplesData": {
+							"description": "",
+							"examples": [
+								{
+									"title": "{$c}getProvider{/$c} Default Values",
+									"description": "Shows what values are taken when the optional values for a SSXPocketProvider are not provided.",
+									"example": "const rpc: SSXRPCProvider = {\nservice: SSXRPCProviders.SSXPocketProvider\n}\n\nconst provider = getProvider(rpc)\n\n// provider is now a ethers.js provider connected to the ethereum mainnet\n// With a public api key\n"
+								}
+							]
+						}
 					}
 				},
 				"SSXCustomProvider": {
@@ -594,7 +646,7 @@
 					"title": "isSSXEtherscanProvider",
 					"link": "/isSSXEtherscanProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXEtherscan Provider",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is a {$c}SSXEtherscanProvider{/c}. This is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L110",
 					"data": {
 						"primitiveData": {
@@ -608,6 +660,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXEtherscanProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXEtherscanProvider =>\n\tprovider.service === SSXRPCProviders.SSXEtherscanProvider"
+								},
+								{
+									"title": "Matching a SSXEtherscanProvider",
+									"description": "How to match an SSXEtherscanProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXEtherscanProvider\n}: SSXRPCProvider\n\nif (isSSXEtherscanProvider(rpc)) {\n\t// rpc is an SSXEtherscanProvider\n} else {\n\t// rpc is not an SSXEtherscanProvider\n}"
 								}
 							]
 						}
@@ -617,7 +674,7 @@
 					"title": "isSSXInfuraProvider",
 					"link": "/isSSXInfuraProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXInfuraProvider",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXInfuraProvider. This is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L144",
 					"data": {
 						"primitiveData": {
@@ -631,6 +688,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXInfuraProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXInfuraProvider =>\n\tprovider.service === SSXRPCProviders.SSXInfuraProvider"
+								},
+								{
+									"title": "Matching a SSXInfuraProvider",
+									"description": "How to match an SSXInfuraProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXInfuraProvider\n}: SSXRPCProvider\n\nif (isSSXInfuraProvider(rpc)) {\n\t// rpc is an SSXInfuraProvider\n} else {\n\t// rpc is not an SSXInfuraProvider\n}"
 								}
 							]
 						}
@@ -640,7 +702,7 @@
 					"title": "isSSXAlchemyProvider",
 					"link": "/isSSXAlchemyProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXAlchemyProvider",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an SSXAlchemyProvider. This is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L172",
 					"data": {
 						"primitiveData": {
@@ -654,6 +716,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXAlchemyProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXAlchemyProvider =>\n\tprovider.service === SSXRPCProviders.SSXAlchemyProvider"
+								},
+								{
+									"title": "Matching a SSXAlchemyProvider",
+									"description": "How to match an SSXAlchemyProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXAlchemyProvider\n}: SSXRPCProvider\n\nif (isSSXAlchemyProvider(rpc)) {\n\t// rpc is an SSXAlchemyProvider\n} else {\n\t// rpc is not an SSXAlchemyProvider\n}"
 								}
 							]
 						}
@@ -663,7 +730,7 @@
 					"title": "isSSXCloudflareProvider",
 					"link": "/isSSXCloudflareProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXCloudflareProvider{/$c}",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXCloudflareProvider{/$c}. It is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L183",
 					"data": {
 						"primitiveData": {
@@ -677,6 +744,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXCloudflareProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXCloudflareProvider =>\n\tprovider.service === SSXRPCProviders.SSXCloudflareProvider"
+								},
+								{
+									"title": "Matching a SSXCloudflareProvider",
+									"description": "How to match an SSXCloudflareProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXCloudflareProvider\n}: SSXRPCProvider\n\nif (isSSXCloudflareProvider(rpc)) {\n\t// rpc is an SSXCloudflareProvider\n} else {\n\t// rpc is not an SSXCloudflareProvider\n}"
 								}
 							]
 						}
@@ -686,7 +758,7 @@
 					"title": "isSSXPocketProvider",
 					"link": "/isSSXPocketProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXPocketProvider{/$c}",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXPocketProvider{/$c}. It is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L204",
 					"data": {
 						"primitiveData": {
@@ -700,6 +772,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXPocketProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXPocketProvider =>\n\tprovider.service === SSXRPCProviders.SSXPocketProvider"
+								},
+								{
+									"title": "Matching a SSXPocketProvider",
+									"description": "How to match an SSXPocketProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXPocketProvider\n}: SSXRPCProvider\n\nif (isSSXPocketProvider(rpc)) {\n\t// rpc is an SSXPocketProvider\n} else {\n\t// rpc is not an SSXPocketProvider\n}"
 								}
 							]
 						}
@@ -709,7 +786,7 @@
 					"title": "isSSXAnkrProvider",
 					"link": "/isSSXAnkrProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXAnkrProvider{/$c}",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXAnkrProvider{/$c}. It is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L224",
 					"data": {
 						"primitiveData": {
@@ -723,6 +800,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXAnkrProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXAnkrProvider =>\n\tprovider.service === SSXRPCProviders.SSXAnkrProvider"
+								},
+								{
+									"title": "Matching a SSXAnkrProvider",
+									"description": "How to match an SSXAnkrProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXAnkrProvider\n}: SSXRPCProvider\n\nif (isSSXAnkrProvider(rpc)) {\n\t// rpc is an SSXAnkrProvider\n} else {\n\t// rpc is not an SSXAnkrProvider\n}"
 								}
 							]
 						}
@@ -732,7 +814,7 @@
 					"title": "isSSXCustomProvider",
 					"link": "/isSSXCustomProvider",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXCustomProvider{/$c}",
+					"description": "A function that checks if a {$c}SSXRPCProvider{/$c} is an {$c}SSXCustomProvider{/$c}. It is mainly used by SSX to determine the RPC provider and generate the right ethers RPC provider based on which it is. Regardless, it is still exported and available for use, although one might not find much use for it",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L224",
 					"data": {
 						"primitiveData": {
@@ -746,6 +828,11 @@
 									"title": "Variable function",
 									"description": "",
 									"example": "const isSSXCustomProvider = {\n\tprovider: SSXRPCProvider\n): provider is SSXCustomProvider =>\n\tprovider.service === SSXRPCProviders.SSXCustomProvider"
+								},
+								{
+									"title": "Matching a SSXCustomProvider",
+									"description": "How to match an SSXCustomProvider",
+									"example": "const rpc = {\n\tservice: SSXRPCProviders.SSXCustomProvider\n}: SSXRPCProvider\n\nif (isSSXCustomProvider(rpc)) {\n\t// rpc is an SSXCustomProvider\n} else {\n\t// rpc is not an SSXCustomProvider\n}"
 								}
 							]
 						}
@@ -821,7 +908,7 @@
 					"title": "isSSXRouteConfig",
 					"link": "/isSSXRouteConfig",
 					"type": "Variable",
-					"description": "A function that checks if a {$c}SSXServerRouteEndpointType{/$c} is an SSX Route config object",
+					"description": "A function that checks if a {$c}SSXServerRouteEndpointType{/$c} is an SSX Route config object. Another one of those functions that are exported but really only used internally",
 					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/types.ts#L29-L32",
 					"data": {
 						"primitiveData": {
@@ -1232,7 +1319,50 @@
 							}
 						]
 					}
-				}
+				},
+				"getProvider": {
+					"title": "getProvider",
+					"link": "/getProvider",
+					"type": "Variable",
+					"description": "A function that returns an ethers.js provider based on the network. Used by SSXServer to get the right provider. If rpc isn't provided, gets the ethers js default provider. Not meant to be used outside of the SSX packages.",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/utils/utils.ts#L26",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "A function that returns an ethers.js provider based on a provided RPC configuration"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": {
+								"title": "Typedef",
+								"description": "The typedef of the function",
+								"example": "const getProvider = (\nrpc?: SSXRPCProvdier\n): ethers.providers.BaseProvider"
+							}
+						}
+					}
+				},
+				"ssxResolveEns": {
+					"title": "ssxResolveEns",
+					"link": "/ssxResolveEns",
+					"type": "Variable",
+					"description": "A helper function that obtains primary ENS data for a given address. Not meant to be used outside of the SSX packages.",
+					"github": "https://github.com/spruceid/ssx/blob/main/packages/ssx-core/src/utils/utils.ts#L78",
+					"data": {
+						"primitiveData": {
+							"type": "function",
+							"description": "A function that obtains primary ENS data for a given address"
+						},
+						"examplesData": {
+							"description": "",
+							"examples": {
+								"title": "Typedef",
+								"description": "The typedef of the function",
+								"example": "const ssxResolveEns = async (\n\tprovider: ethers.providers.BaseProvider,\n\taddress: string,\n\tresolveEnsOpts: {\n\tdomain?: boolean\n\tavatar?: boolean\n\t} = {\n\t\tdomain: true,\n\t\tavatar: true,\n\t}\n): Promise<SSXEnsData>"
+							}
+						}
+					}
+				},
+				"SSXServerHost": {}
 			}
 		}
 	},
@@ -1240,6 +1370,7 @@
 		"1": "/",
 		"2": "https://eips.ethereum.org/EIPS/eip-155",
 		"3": "https://eips.ethereum.org/EIPS/eip-55",
+		"4": "https://docs.ethers.org/v5/api/providers/api-providers/#AlchemyProvider",
 		"8": "https://docs.ethers.org/v5/api/utils/web/#ConnectionInfo",
 		"9": "https://docs.ethers.org/v5/api/providers/types/#providers-Network",
 		"10": "https://docs.ethers.org/v5/api/providers/jsonrpc-provider/#JsonRpcProvider",
@@ -1275,6 +1406,10 @@
 		{
 			"title": "SSXEnsConfig",
 			"reason": "resolveOnServer throws a server error, unsure why. More research needed (On Goerli network, might be reason) as well as why you would do this"
+		},
+		{
+			"title": "Double Check",
+			"reason": "Double check the following: types.ts, utils, all genosis files, "
 		}
 	]
 }

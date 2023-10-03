@@ -18,17 +18,84 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Writing Notes
 
-To learn more about Next.js, take a look at the following resources:
+## Links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+There are two types of links, chapter links and new tab links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Chapter Link
 
-## Deploy on Vercel
+A chapter link is marked as {$c} --content-- {/$c}
+Which will look for a chapter with the identical name and link to it
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Tab Link
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A tab link is marked as {$#} --content-- {/#}
+Which will look in the notes for the link to reference to and open it up
+in a new tab
+
+## Current supported types
+
+1. Class
+2. Enum
+3. Variable
+4. Interface
+5. Type
+
+## Current data types
+
+1. constructorData
+2. enumData
+3. examplesData
+4. methodsData
+5. propertiesData
+6. primitiveData
+
+### constructorData Structure
+
+### enumData Structure
+
+An array of objects
+
+Each object is represented as the following:
+{
+member: String
+value: Any
+description: String
+github?: String
+}
+
+### examplesData Structure
+
+An object
+
+{
+description: String
+examples: [{
+title: String
+description: String
+example: String
+}]
+}
+
+### propertiesData Structure
+
+An array of objects
+
+Each object has the following structure:
+{
+property: String
+type: String
+description: String,
+github?: String
+}
+
+### primitiveData
+
+An object with the following structure
+{
+type: String
+description: String
+github?: String
+}
